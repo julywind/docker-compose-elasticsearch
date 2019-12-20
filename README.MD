@@ -1,7 +1,7 @@
 为了方便操作，给docker-compose 设置一个别名
  alias dc=docker-compose
-启动集群：
-dc up -d
+ 
+启动集群：dc up -d
 
 elastic 7.x以后 内置了x-pack, 项目默认没有打开x-pack认证
 修改elasticsearch.yml:
