@@ -27,7 +27,7 @@ services:
     image: docker.elastic.co/elasticsearch/elasticsearch:7.5.0
     container_name: es7_01
     environment:
-      - cluster.name=julywind
+      - cluster.name=j_cluster
       - node.name=es7_01
       - bootstrap.memory_lock=true
       - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
@@ -50,7 +50,7 @@ services:
     image: docker.elastic.co/elasticsearch/elasticsearch:7.5.0
     container_name: es7_02
     environment:
-      - cluster.name=geektime
+      - cluster.name=j_cluster
       - node.name=es7_02
       - bootstrap.memory_lock=true
       - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
