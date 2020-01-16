@@ -54,3 +54,16 @@ xpack.security.transport.ssl.verification_mode: certificate
 xpack.security.transport.ssl.keystore.path: elastic-certificates.p12
 xpack.security.transport.ssl.truststore.path: elastic-certificates.p12
 ```
+如果docker-compose启动后机器出现卡死：
+则需要检查一下剩余内存，至少1g
+
+elk启动的时候可能会提示如下错误:
+1. max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144]
+原因以及解决办法：
+运行elasticsearch需要vm.max_map_count至少需要262144内存
+切换到root用户修改配置sysctl.conf
+vi /etc/sysctl.conf
+在尾行添加以下内容   
+vm.max_map_count=262144
+并执行命令
+sysctl -p
