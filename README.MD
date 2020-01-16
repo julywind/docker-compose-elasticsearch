@@ -26,6 +26,7 @@ cp config/elastic-certificates.p12 ./data
 exit
 
 mkdir ssl
+chmod 777 ssl
 cp -a es7-data/elastic-certificates.p12 ./ssl
 
 #修改docker-compose.yml，去掉证书挂载配置项的注释，es01和es02两个都需要改
