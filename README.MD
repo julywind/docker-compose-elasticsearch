@@ -13,9 +13,9 @@ dc restart
 #进入主节点
 dc exec es01 bash
 #自动生成默认密码，记录下来
-elasticsearch-setup-password -v auto
+elasticsearch-setup-passwords -v auto
 #也可以手动生成密码
-#elasticsearch-setup-password -v interactive
+#elasticsearch-setup-passwords -v interactive
 
 #生成证书
 elasticsearch-certutil cert -out config/elastic-certificates.p12 -pass ""
