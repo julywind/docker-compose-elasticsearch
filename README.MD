@@ -26,8 +26,8 @@ cp config/elastic-certificates.p12 ./data
 exit
 
 mkdir ssl
-chmod 777 ssl
 cp -a es7-data/elastic-certificates.p12 ./ssl
+chmod 777 ssl -R
 
 #修改docker-compose.yml，去掉证书挂载配置项的注释，es01和es02两个都需要改
 #修改kibana.yml 使用前面设置的kibana账号的密码，替换配置文件内的占位符，并去掉注释
